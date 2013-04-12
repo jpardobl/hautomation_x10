@@ -1,0 +1,2 @@
+MOCHAD_HOST = "localhost"
+MOCHAD_PORT = 1099
