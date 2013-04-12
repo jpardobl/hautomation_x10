@@ -37,7 +37,7 @@ setup(
             "pl_bri = hautomation_x10.cmds:pl_bri",
         ],
         "console_scripts": [
-            "populate_db = hautomation_x10.deploy:populate_db",
+            "populate_x10_db = hautomation_x10.deploy:populate_db",
 
         ]
     }
