@@ -32,6 +32,6 @@ def pl_bri(address, value, mochad_port=None, mochad_host=None):
 
     validate_address(address)
 
-    cmd = "pl %s bri %s" % (address, value)
+    cmd = "pl %s bright %s" % (address, value)
     netcat.command(cmd, mochad_port, mochad_host)
     return True
