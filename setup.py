@@ -18,6 +18,11 @@ setup(
     url='http://www.example.com/',
     author='Javier Pardo Blasco(jpardobl)',
     author_email='jpardo@digitalhigh.es',
+    install_requires = (
+
+      #"simplejson==2.6.2",
+
+    ),
     classifiers=[
         'Environment :: Home Automation',
         'Intended Audience :: Developers',
