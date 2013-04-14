@@ -8,20 +8,18 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='hautomation_x10',
-    version='0.6',
+    version='0.7',
     packages=['hautomation_x10'],
     include_package_data=True,
     license='BSD License',
     description='Mochad wrapper to help issuing X10 commands',
     long_description=README,
 #TODO set the project's home page
-    url='http://www.example.com/',
+    url='http://jpardobl.com',
     author='Javier Pardo Blasco(jpardobl)',
     author_email='jpardo@digitalhigh.es',
     install_requires = (
-
       #"simplejson==2.6.2",
-
     ),
     classifiers=[
         'Environment :: Home Automation',
