@@ -2,7 +2,7 @@ import re
 
 
 def validate_address(address):
-    m = re.match("^[a-pA-P]{1}(\d){0,2}", address)
+    m = re.match("^[a-pA-P](\d{0,2})", address)
     if not m:
         raise ValueError("Unsupported address: %s" % address)
 

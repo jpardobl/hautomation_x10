@@ -16,7 +16,7 @@ def pl_switch(address, value, mochad_host=None, mochad_port=None):
 
 
 def pl_dim(address, value, mochad_host=None, mochad_port=None):
-    if value not in range(0, 32):
+    if int(value) not in range(0, 32):
         raise ValueError("Dim value must be in the range(0, 32)")
 
     validate_address(address)
@@ -27,7 +27,7 @@ def pl_dim(address, value, mochad_host=None, mochad_port=None):
 
 
 def pl_bri(address, value, mochad_host=None, mochad_port=None):
-    if value not in range(0, 32):
+    if int(value) not in range(0, 32):
         raise ValueError("Dim value must be in the range(0, 32)")
 
     validate_address(address)

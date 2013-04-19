@@ -1,5 +1,6 @@
 import unittest
 import cmds
+import time
 
 
 class TestX10(unittest.TestCase):
@@ -11,11 +12,12 @@ class TestX10(unittest.TestCase):
         self.assertRaises(ValueError, cmds.pl_switch("of", "on"))
 
     def test_switch_on(self):
-        print "Hacmos los tests"
-        self.assertTrue(cmds.pl_switch("A1", "on"))
+        self.assertTrue(cmds.pl_switch("A5", "on", "192.168.102.17"))
+        time.sleep(30)
 
     def test_switch_off(self):
-        self.assertTrue(cmds.pl_switch("A1", "off"))
+        self.assertTrue(cmds.pl_switch("A5", "off", "192.168.102.17"))
+        time.sleep(30)
   #TODO rest of the tests
 
 

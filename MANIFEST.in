@@ -1,2 +1,2 @@
 include LICENSE
-recursive-include x10/docs *
+recursive-include hautomation_x10/docs *

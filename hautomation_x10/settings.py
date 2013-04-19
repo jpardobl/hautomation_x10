@@ -1,2 +1,3 @@
-MOCHAD_HOST = "localhost"
+#MOCHAD_HOST = "localhost"
+MOCHAD_HOST = "192.168.102.17"
 MOCHAD_PORT = 1099
