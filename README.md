@@ -3,6 +3,21 @@ hautomation_x10
 
 Python wrapper module which sends home automation commands to mochad
 
+Introduction
+------------
+
+This Python module is a set of functions to make easier to send X10 home automation
+commands to mochad.
+
+At the momment the module is capable of sending the following commands
+
+ - Power line switch command which accepts "on" and "off" values
+ - Power line dim command which accepts values in the range 1..31
+ - Power line bright command which accepts values in the range 1..31
+
+By initializing the settings.MOCHAD_PORT and the settings.MOCHAD_HOST configuration directives
+mochad daemon can be in any reachable host.
+
 
 Quick start
 -----------
@@ -18,7 +33,17 @@ Quick start
 5. Start issuing commands.
 
     >>> import hautomation_x10.cmds as cmds
+
     >>> cmds.pl_switch("A5", "off")
+
     >>> cmds.pl_switch("A6", "on")
+
     >>> cmds.pl_dim("A3", 31)
+
     >>> cmds.pl_bri("A3", 4)
+
+
+Testing
+-------
+
+>>> python hautomation_x10/tests.py

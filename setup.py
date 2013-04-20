@@ -1,14 +1,14 @@
 import os
 from setuptools import setup
 
-README = open(os.path.join(os.path.dirname(__file__), 'README.txt')).read()
+README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='hautomation_x10',
-    version='0.7.1',
+    version='0.8',
     packages=['hautomation_x10'],
     include_package_data=True,
     license='BSD License',
@@ -21,6 +21,8 @@ setup(
     install_requires = (
       #"simplejson==2.6.2",
     ),
+    test_suite='hautomation_x10.tests.main',
+    #tests_require=("selenium", "requests"),
     classifiers=[
         'Environment :: Home Automation',
         'Intended Audience :: Developers',

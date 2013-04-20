@@ -13,16 +13,17 @@ class TestX10(unittest.TestCase):
 
     def test_switch_on(self):
         self.assertTrue(cmds.pl_switch("A5", "on", "192.168.102.17"))
-        time.sleep(30)
+        time.sleep(5)
 
     def test_switch_off(self):
         self.assertTrue(cmds.pl_switch("A5", "off", "192.168.102.17"))
-        time.sleep(30)
+        time.sleep(5)
   #TODO rest of the tests
 
 
 def main():
-    unittest.main()
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestX10)
+    unittest.TextTestRunner(verbosity=2).run(suite)
 
 if __name__ == "__main__":
     unittest.main()
