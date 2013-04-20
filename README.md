@@ -47,3 +47,16 @@ Testing
 -------
 
 >>> python hautomation_x10/tests.py
+
+
+Entry Points
+------------
+
+The deploying of the module generates th following  entry points:
+
+ - populate_x10_db: When using this module from the django-hautomation apps, it is
+ necesary to populate the database with the protocol X10 information. This is the aim
+ of this entry  point
+ - pl_switch: entry point to help find power line switch command to developers
+ - pl_dim: entry point to help find power line dim command to developers
+ - pl_bri: entry point to help find power line bright command to developers
