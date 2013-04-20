@@ -43,6 +43,9 @@ setup(
         ],
         "console_scripts": [
             "populate_x10_db = hautomation_x10.deploy:populate_db",
+            "pl_switch = hautomation_x10.cmds:pl_switch",
+            "pl_dim = hautomation_x10.cmds:pl_dim",
+            "pl_bri = hautomation_x10.cmds:pl_bri",
 
         ]
     }
