@@ -1,6 +1,7 @@
 import netcat
 import settings
 from utils import validate_address
+import re
 
 
 def pl_switch(address, value, mochad_host=None, mochad_port=None):
