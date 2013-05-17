@@ -1,0 +1,13 @@
+A plugin must:
+
+ - have a initialization function at <module>.start_up()
+ - Provide each command at <module>.cmds.*
+ - So far must provide the following commands:
+      - pl_switch: <module>.cmds.pl_switch Power line switch on/off a device
+      - pl_dim: <module>.cmds.pl_dim  Power line dim a device
+      - pl_bri: <module>.cmds.pl_bri Power line bright a device
+ - A script to populate the database with the protocol info, that is:
+      - Protocol name
+      - module name: the name of the python module that implements the plugin
+      - validate_address_function: The path in dotted format to the valida_address
+      that validate an address in the scope of the domotic protocol.

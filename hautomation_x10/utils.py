@@ -1,8 +1,10 @@
 import re
 
+ADDRESS_REGEXP = "[a-pA-P](\d{0,2})"
+
 
 def validate_address(address):
-    m = re.match("^[a-pA-P](\d{0,2})", address)
+    m = re.match("^%s$" % ADDRESS_REGEXP, address)
     if not m:
         raise ValueError("Unsupported address: %s" % address)
 
