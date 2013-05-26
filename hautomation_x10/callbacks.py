@@ -26,14 +26,25 @@ def ac_command(self, event):
             'EV_ERROR',
             data=simplejson.dumps({"errors": [err, ]}))
 
+queue = [] #queue where commands from protocol are kept while processing.
 
 def ac_rx_data(self, event):
     data = event.kw['data']
     #TODO analize device update string and convert to json {"did": ... , "new_state": ...}
     print("RECIBO(%s)======> %s" % (self, data))
-    pattern = "HouseUnit\:\s(%s)" % ADDRESS_REGEXP
+    pattern = r"HouseUnit\:\s(%s)" % ADDRESS_REGEXP
     print pattern
     m = re.search(pattern, data)
     if m is not None:
-        print m.group(1)
-    self.broadcast_event('EV_DEVICE_UPDATE', data=data)
+        queue.append(m.group(1))
+        print "encontrada la direccion"
+        return
+
+    pattern = r"Func\:\s(.+)$"
+    print "ahora miramos la funcion"
+    m = re.search(pattern, data)
+    if m is not None:
+
+        address = queue.pop()
+        print "function encotnrada: %s %s" % (address, m.group(1))
+        self.broadcast_event('EV_DEVICE_UPDATE', data={"did": address, "cmd": m.group(1)})

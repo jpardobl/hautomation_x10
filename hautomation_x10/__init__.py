@@ -88,7 +88,7 @@ def start_up():
         'GRouter.trace_router':  True,
         'GObj.trace_mach':  True,
         'GObj.trace_creation':  False,
-        'GObj.trace_traverse':  True,
+        'GObj.trace_traverse':  False,
         'GObj.trace_subscription':  True,
         'GSock.trace_dump':  True,
         'GObj.logger': logging,
