@@ -18,8 +18,8 @@ def pl_dim(self, address, value):
 
     validate_address(address)
 
-    cmd = "pl %s dim %s" % (address, value)
-    self.send_event('connex', "EV_SEND_DATA", data=cmd)
+    cmd = "pl %s dim %s\n" % (address, value)
+    self.send_event(self.connex, "EV_SEND_DATA", data=cmd)
 
 
 def pl_bri(self, address, value):
@@ -28,6 +28,6 @@ def pl_bri(self, address, value):
 
     validate_address(address)
 
-    cmd = "pl %s bright %s" % (address, value)
-    self.send_event('connex', "EV_SEND_DATA", data=cmd)
+    cmd = "pl %s bright %s\n" % (address, value)
+    self.send_event(self.connex, "EV_SEND_DATA", data=cmd)
 

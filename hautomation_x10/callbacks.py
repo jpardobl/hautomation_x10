@@ -5,7 +5,7 @@ from utils import ADDRESS_REGEXP
 
 def ac_command(self, event):
     data = simplejson.loads(event.kw['data'])
-    print("RECIBO(%s)======> %s" % (self, data))
+    print("EJECUTAMOS COMANDO: ECIBO(%s)======> %s" % (self, data))
 
     cmd = data["cmd"]
     did = data["did"]
@@ -22,11 +22,12 @@ def ac_command(self, event):
             pl_bri(self, did, value)
             return
     except ValueError, err:
-        self.broadcasr_event(
+        self.broadcast_event(
             'EV_ERROR',
-            data=simplejson.dumps({"errors": [err, ]}))
+            data=simplejson.dumps({"errors": [str(err), ]}))
 
 queue = [] #queue where commands from protocol are kept while processing.
+
 
 def ac_rx_data(self, event):
     data = event.kw['data']
