@@ -8,10 +8,29 @@ def ac_command(self, event):
     print("EJECUTAMOS COMANDO: ECIBO(%s)======> %s" % (self, data))
 
     cmd = data["cmd"]
-    did = data["did"]
-    value = data["value"]
+    try:
+        did = data["did"]
+    except Exception:
+        pass
+    try:
+        value = data["value"]
+    except Exception:
+        pass
+
 
     try:
+        if cmd == "pl_all_lights_on":
+            if "group" in data and data["group"] not in ("", None):
+                group = data["group"]
+                pl_all_lights_on(self, group)
+                return
+            print "ERROR no recibimos el grupo"
+        if cmd == "pl_all_lights_off":
+            if "group" in data and data["group"] not in ("", None):
+                group = data["group"]
+                pl_all_lights_off(self, group)
+                return
+            print "ERROR no recibimos el grupo"
         if cmd == "pl_switch":
             pl_switch(self, did, value)
             return
