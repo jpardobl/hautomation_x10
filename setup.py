@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='hautomation_x10',
-    version='0.10',
+    version='0.10.1',
     packages=['hautomation_x10'],
     include_package_data=True,
     license='BSD License',
