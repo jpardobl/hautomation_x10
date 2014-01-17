@@ -15,7 +15,7 @@ setup(
     description='Mochad wrapper to help issuing X10 commands',
     long_description=README,
 #TODO set the project's home page
-    url='http://jpardobl.com',
+    url='http://blog.digitalhigh.es',
     author='Javier Pardo Blasco(jpardobl)',
     author_email='jpardo@digitalhigh.es',
     install_requires = (
@@ -24,13 +24,13 @@ setup(
     test_suite='hautomation_x10.tests.main',
     #tests_require=("selenium", "requests"),
     classifiers=[
-        'Environment :: Home Automation',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Topic :: Home Automation',
     ],
     entry_points={
         "tdd": [
