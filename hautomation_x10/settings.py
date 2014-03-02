@@ -1,4 +1,4 @@
-MOCHAD_HOST = "localhost"
+MOCHAD_HOST = "HA_MOCHAD_HOST"
 #MOCHAD_HOST = "raspberry"
 MOCHAD_PORT = 1099
 
