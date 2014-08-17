@@ -18,12 +18,7 @@ def populate_db():
                 name="X10",
                 gobj_name="driver_X10",
                 module="hautomation_x10",
-                validate_address_module="hautomation_x10.utils",
-                switch="hautomation_x10.cmds.pl_switch",
-                bri="hautomation_x10.cmds.pl_bri",
-                dim="hautomation_x10.cmds.pl_dim",
-                all_lights_on="hautomation_x10.cmds.pl_all_lights_on",
-                all_lights_off="hautomation_x10.cmds.pl_all_lights_off").save()
+                validate_address_module="hautomation_x10.utils").save()
 
             sys.stdout.writelines("Protocoll successfully populated into db")
         else:
