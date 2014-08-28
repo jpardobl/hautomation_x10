@@ -12,11 +12,11 @@ class TestX10(unittest.TestCase):
         self.assertRaises(ValueError, cmds.pl_switch("of", "on"))
 
     def off_test_switch_on(self):
-        self.assertTrue(cmds.pl_switch("A5", "on", "192.168.102.17"))
+        self.assertTrue(cmds.pl_switch("A5", "on"))
         time.sleep(5)
 
     def off_test_switch_off(self):
-        self.assertTrue(cmds.pl_switch("A5", "off", "192.168.102.17"))
+        self.assertTrue(cmds.pl_switch("A5", "off"))
         time.sleep(5)
 
     def test_all_lights_aff(self, ):
