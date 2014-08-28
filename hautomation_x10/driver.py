@@ -20,6 +20,7 @@ def netcat(hostname, port, content):
 
         driver_logger.debug("Connected to: %s:%s" % (hostname, port))
         s.sendall(b"%s\n" % content)
+        driver_logger.debug("sent: %s" % content)
         s.shutdown(socket.SHUT_WR)
         buff = ""
 
